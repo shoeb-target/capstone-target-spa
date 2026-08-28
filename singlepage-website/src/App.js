@@ -5,7 +5,6 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  BrowserRouter,
   useLocation,
 } from "react-router-dom";
 import Navbar from "./compoents/Navbar/Navbar";
