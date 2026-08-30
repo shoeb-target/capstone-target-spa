@@ -17,18 +17,36 @@ import ScrollToTop from "./compoents/ScrollToTop";
 function RouteChangeTracker() {
   const location = useLocation();
 
+  const getViewName = (pathname) => {
+    if (pathname === "/") return "home";
+    if (pathname === "/services") return "services";
+    if (pathname === "/products") return "products";
+    return "unknown";
+  };
+
   useEffect(() => {
-    const trySatelliteTrack = (retries = 10) => {
-      if (window._satellite) {
-        window._satellite.track("routeChange");
+    const trySendEvent = (retries = 10) => {
+      if (window.alloy) {
+        window.alloy("sendEvent", {
+          renderDecisions: true,
+          xdm: {
+            eventType: "web.webpagedetails.pageViews",
+            web: {
+              webPageDetails: {
+                viewName: getViewName(location.pathname),
+                URL: window.location.href
+              }
+            }
+          }
+        });
       } else if (retries > 0) {
-        setTimeout(() => trySatelliteTrack(retries - 1), 200);
+        setTimeout(() => trySendEvent(retries - 1), 200);
       } else {
-        console.log("_satellite never became available");
+        console.log("alloy never became available");
       }
     };
 
-    trySatelliteTrack();
+    trySendEvent();
   }, [location]);
 
   return null;
