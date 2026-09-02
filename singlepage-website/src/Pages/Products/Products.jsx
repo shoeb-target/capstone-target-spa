@@ -27,6 +27,14 @@ function Products() {
                 value: 1
               }
             }
+          },
+          // MUST BE ADDED FOR ADOBE TARGET
+          data: {
+            __adobe: {
+              target: {
+                "entity.id": randomProductId
+              }
+            }
           }
         });
         console.log("Product view sent for SKU:", randomProductId);
