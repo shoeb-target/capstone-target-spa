@@ -15,10 +15,14 @@ import Login from "./Pages/login/login";
 import Footer from "./compoents/Footer/Footer";
 import ScrollToTop from "./compoents/ScrollToTop";
 
-const getRandomGender = () => {
-  const options = ["men", "women", "unisex"];
-  const randomIndex = Math.floor(Math.random() * options.length);
-  return options[randomIndex];
+const getSessionGender = () => {
+  let gender = sessionStorage.getItem("customerGender");
+  if (!gender) {
+    const options = ["men", "women", ""];
+    gender = options[Math.floor(Math.random() * options.length)];
+    sessionStorage.setItem("customerGender", gender);
+  }
+  return gender;
 };
 
 function RouteChangeTracker() {
@@ -50,7 +54,7 @@ function RouteChangeTracker() {
     __adobe: {
       target: {
         "profile.customerName": "Shoeb",
-        "profile.shbGender": getRandomGender()
+        "profile.shbGender": getSessionGender()
       }
     }
   }
