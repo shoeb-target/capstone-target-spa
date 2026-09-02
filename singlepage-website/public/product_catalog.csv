@@ -1,21 +1,27 @@
-id,name,category,gender,price,pageUrl,imageUrl,description
-101,Classic Oxford Shirt,shirts,men,49.99,https://flourishing-entremet-8ec246.netlify.app/products/101,https://placehold.co/300x300?text=Oxford+Shirt,A timeless oxford shirt for everyday wear
-102,Slim Fit Chinos,pants,men,59.99,https://flourishing-entremet-8ec246.netlify.app/products/102,https://placehold.co/300x300?text=Chinos,Comfortable slim fit chinos for men
-103,Leather Bomber Jacket,jackets,men,149.99,https://flourishing-entremet-8ec246.netlify.app/products/103,https://placehold.co/300x300?text=Bomber+Jacket,Premium leather bomber jacket
-104,Running Sneakers,shoes,men,89.99,https://flourishing-entremet-8ec246.netlify.app/products/104,https://placehold.co/300x300?text=Sneakers,Lightweight running sneakers for men
-105,Formal Blazer,jackets,men,129.99,https://flourishing-entremet-8ec246.netlify.app/products/105,https://placehold.co/300x300?text=Blazer,Sharp formal blazer for office wear
-106,Denim Jeans,pants,men,54.99,https://flourishing-entremet-8ec246.netlify.app/products/106,https://placehold.co/300x300?text=Denim+Jeans,Classic straight fit denim jeans
-107,Graphic T-Shirt,shirts,men,24.99,https://flourishing-entremet-8ec246.netlify.app/products/107,https://placehold.co/300x300?text=T-Shirt,Casual graphic print t-shirt
-108,Leather Belt,accessories,men,29.99,https://flourishing-entremet-8ec246.netlify.app/products/108,https://placehold.co/300x300?text=Belt,Genuine leather belt for men
-109,Wool Sweater,shirts,men,64.99,https://flourishing-entremet-8ec246.netlify.app/products/109,https://placehold.co/300x300?text=Sweater,Warm wool sweater for winter
-110,Analog Wrist Watch,accessories,men,199.99,https://flourishing-entremet-8ec246.netlify.app/products/110,https://placehold.co/300x300?text=Watch,Elegant analog wrist watch
-201,Floral Summer Dress,dresses,women,69.99,https://flourishing-entremet-8ec246.netlify.app/products/201,https://placehold.co/300x300?text=Summer+Dress,Light floral summer dress
-202,High Waist Skinny Jeans,pants,women,58.99,https://flourishing-entremet-8ec246.netlify.app/products/202,https://placehold.co/300x300?text=Skinny+Jeans,High waist skinny fit jeans
-203,Silk Blouse,shirts,women,74.99,https://flourishing-entremet-8ec246.netlify.app/products/203,https://placehold.co/300x300?text=Silk+Blouse,Elegant silk blouse for women
-204,Ankle Strap Heels,shoes,women,94.99,https://flourishing-entremet-8ec246.netlify.app/products/204,https://placehold.co/300x300?text=Heels,Stylish ankle strap heels
-205,Trench Coat,jackets,women,159.99,https://flourishing-entremet-8ec246.netlify.app/products/205,https://placehold.co/300x300?text=Trench+Coat,Classic beige trench coat
-206,Cropped Denim Jacket,jackets,women,79.99,https://flourishing-entremet-8ec246.netlify.app/products/206,https://placehold.co/300x300?text=Denim+Jacket,Trendy cropped denim jacket
-207,Yoga Leggings,pants,women,39.99,https://flourishing-entremet-8ec246.netlify.app/products/207,https://placehold.co/300x300?text=Leggings,Stretchy yoga leggings for women
-208,Gold Hoop Earrings,accessories,women,34.99,https://flourishing-entremet-8ec246.netlify.app/products/208,https://placehold.co/300x300?text=Earrings,Classic gold hoop earrings
-209,Cashmere Scarf,accessories,women,49.99,https://flourishing-entremet-8ec246.netlify.app/products/209,https://placehold.co/300x300?text=Scarf,Soft cashmere scarf
-210,Ballet Flats,shoes,women,64.99,https://flourishing-entremet-8ec246.netlify.app/products/210,https://placehold.co/300x300?text=Flats,Comfortable ballet flats
+## RECSRecommendations Upload File
+## RECS''## RECS'' indicates a Recommendations pre-process header. Please do not remove these lines.
+## RECS
+## RECSUse this file to upload product display information to Recommendations. Each product has its own row. Each line must contain 19 values and if not all are filled a space should be left.
+## RECSThe last 100 columns (entity.custom1 - entity.custom100) are custom. The name 'customN' can be replaced with a custom name such as 'onSale' or 'brand'.
+## RECSIf the products already exist in Recommendations then changes uploaded here will override the data in Recommendations. Any new attributes entered here will be added to the product''s entry in Recommendations.
+## RECSentity.id,entity.name,entity.categoryId,entity.message,entity.thumbnailUrl,entity.value,entity.pageUrl,entity.inventory,entity.margin,entity.custom1,entity.custom2,entity.custom3,entity.custom4,entity.custom5,entity.custom6,entity.custom7,entity.custom8,entity.custom9,entity.custom10
+101,Classic Oxford Shirt,shirts,,https://placehold.co/300x300?text=Oxford+Shirt,49.99,https://flourishing-entremet-8ec246.netlify.app/products/101,100,,men,A timeless oxford shirt for everyday wear,,,,,,,,
+102,Slim Fit Chinos,pants,,https://placehold.co/300x300?text=Chinos,59.99,https://flourishing-entremet-8ec246.netlify.app/products/102,100,,men,Comfortable slim fit chinos for men,,,,,,,,
+103,Leather Bomber Jacket,jackets,,https://placehold.co/300x300?text=Bomber+Jacket,149.99,https://flourishing-entremet-8ec246.netlify.app/products/103,100,,men,Premium leather bomber jacket,,,,,,,,
+104,Running Sneakers,shoes,,https://placehold.co/300x300?text=Sneakers,89.99,https://flourishing-entremet-8ec246.netlify.app/products/104,100,,men,Lightweight running sneakers for men,,,,,,,,
+105,Formal Blazer,jackets,,https://placehold.co/300x300?text=Blazer,129.99,https://flourishing-entremet-8ec246.netlify.app/products/105,100,,men,Sharp formal blazer for office wear,,,,,,,,
+106,Denim Jeans,pants,,https://placehold.co/300x300?text=Denim+Jeans,54.99,https://flourishing-entremet-8ec246.netlify.app/products/106,100,,men,Classic straight fit denim jeans,,,,,,,,
+107,Graphic T-Shirt,shirts,,https://placehold.co/300x300?text=T-Shirt,24.99,https://flourishing-entremet-8ec246.netlify.app/products/107,100,,men,Casual graphic print t-shirt,,,,,,,,
+108,Leather Belt,accessories,,https://placehold.co/300x300?text=Belt,29.99,https://flourishing-entremet-8ec246.netlify.app/products/108,100,,men,Genuine leather belt for men,,,,,,,,
+109,Wool Sweater,shirts,,https://placehold.co/300x300?text=Sweater,64.99,https://flourishing-entremet-8ec246.netlify.app/products/109,100,,men,Warm wool sweater for winter,,,,,,,,
+110,Analog Wrist Watch,accessories,,https://placehold.co/300x300?text=Watch,199.99,https://flourishing-entremet-8ec246.netlify.app/products/110,100,,men,Elegant analog wrist watch,,,,,,,,
+201,Floral Summer Dress,dresses,,https://placehold.co/300x300?text=Summer+Dress,69.99,https://flourishing-entremet-8ec246.netlify.app/products/201,100,,women,Light floral summer dress,,,,,,,,
+202,High Waist Skinny Jeans,pants,,https://placehold.co/300x300?text=Skinny+Jeans,58.99,https://flourishing-entremet-8ec246.netlify.app/products/202,100,,women,High waist skinny fit jeans,,,,,,,,
+203,Silk Blouse,shirts,,https://placehold.co/300x300?text=Silk+Blouse,74.99,https://flourishing-entremet-8ec246.netlify.app/products/203,100,,women,Elegant silk blouse for women,,,,,,,,
+204,Ankle Strap Heels,shoes,,https://placehold.co/300x300?text=Heels,94.99,https://flourishing-entremet-8ec246.netlify.app/products/204,100,,women,Stylish ankle strap heels,,,,,,,,
+205,Trench Coat,jackets,,https://placehold.co/300x300?text=Trench+Coat,159.99,https://flourishing-entremet-8ec246.netlify.app/products/205,100,,women,Classic beige trench coat,,,,,,,,
+206,Cropped Denim Jacket,jackets,,https://placehold.co/300x300?text=Denim+Jacket,79.99,https://flourishing-entremet-8ec246.netlify.app/products/206,100,,women,Trendy cropped denim jacket,,,,,,,,
+207,Yoga Leggings,pants,,https://placehold.co/300x300?text=Leggings,39.99,https://flourishing-entremet-8ec246.netlify.app/products/207,100,,women,Stretchy yoga leggings for women,,,,,,,,
+208,Gold Hoop Earrings,accessories,,https://placehold.co/300x300?text=Earrings,34.99,https://flourishing-entremet-8ec246.netlify.app/products/208,100,,women,Classic gold hoop earrings,,,,,,,,
+209,Cashmere Scarf,accessories,,https://placehold.co/300x300?text=Scarf,49.99,https://flourishing-entremet-8ec246.netlify.app/products/209,100,,women,Soft cashmere scarf,,,,,,,,
+210,Ballet Flats,shoes,,https://placehold.co/300x300?text=Flats,64.99,https://flourishing-entremet-8ec246.netlify.app/products/210,100,,women,Comfortable ballet flats,,,,,,,,
