@@ -15,6 +15,12 @@ import Login from "./Pages/login/login";
 import Footer from "./compoents/Footer/Footer";
 import ScrollToTop from "./compoents/ScrollToTop";
 
+const getRandomGender = () => {
+  const options = ["men", "women", "unisex"];
+  const randomIndex = Math.floor(Math.random() * options.length);
+  return options[randomIndex];
+};
+
 function RouteChangeTracker() {
   const location = useLocation();
 
@@ -43,7 +49,8 @@ function RouteChangeTracker() {
   data: {
     __adobe: {
       target: {
-        "profile.customerName": "Shoeb"
+        "profile.customerName": "Shoeb",
+        "profile.shbGender": getRandomGender()
       }
     }
   }
