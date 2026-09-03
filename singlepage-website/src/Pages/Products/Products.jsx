@@ -14,21 +14,8 @@ function Products() {
     const trySendProductView = (retries = 10) => {
       if (window.alloy) {
         window.alloy("sendEvent", {
+          decisionScopes: ["recs_mbox"],
           renderDecisions: false,
-          xdm: {
-            eventType: "commerce.productViews",
-            productListItems: [
-              {
-                SKU: randomProductId
-              }
-            ],
-            commerce: {
-              productViews: {
-                value: 1
-              }
-            }
-          },
-          // MUST BE ADDED FOR ADOBE TARGET
           data: {
             __adobe: {
               target: {
@@ -36,8 +23,12 @@ function Products() {
               }
             }
           }
+        }).then(function (result) {
+          console.log("Target response:", result);
+          console.log("Propositions:", result.propositions || []);
+        }).catch(function (error) {
+          console.error("Target mbox request failed:", error);
         });
-        console.log("Product view sent for SKU:", randomProductId);
       } else if (retries > 0) {
         setTimeout(() => trySendProductView(retries - 1), 200);
       }
