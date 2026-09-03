@@ -14,7 +14,7 @@ function Products() {
     const trySendProductView = (retries = 10) => {
       if (window.alloy) {
         window.alloy("sendEvent", {
-          renderDecisions: true,
+          renderDecisions: false,
           xdm: {
             eventType: "commerce.productViews",
             productListItems: [
