@@ -24,56 +24,33 @@ const getSessionGender = () => {
   return gender;
 };
 
+const getViewName = (pathname) => {
+  if (pathname === "/") return "home";
+  if (pathname === "/services") return "services";
+  if (pathname === "/products") return "products";
+  if (pathname === "/login") return "login";
+  return "unknown";
+};
+
 function RouteChangeTracker() {
   const location = useLocation();
 
-  const getViewName = (pathname) => {
-    if (pathname === "/") return "home";
-    if (pathname === "/services") return "services";
-    if (pathname === "/products") return "products";
-    if (pathname === "/login") return "login";
-    return "unknown";
-  };
-
   useEffect(() => {
-    const trySendEvent = (retries = 10) => {
-      if (window.alloy) {
-        window.alloy("sendEvent", {
-          renderDecisions: true,
-          xdm: {
-            eventType: "web.webpagedetails.pageViews",
-            web: {
-              webPageDetails: {
-                viewName: getViewName(location.pathname),
-                URL: window.location.href
-              }
-            },
-            identityMap: {
-              "shoeb_crm_id": [
-                {
-                  authenticatedState: "authenticated",
-                  id: "CUST001",
-                  primary:false
-                }
-              ]
-            }
-          },
-          data: {
-            __adobe: {
-              target: {
-                "profile.shbGender": getSessionGender()
-              }
-            }
-          }
-        });
-      } else if (retries > 0) {
-        setTimeout(() => trySendEvent(retries - 1), 200);
-      } else {
-        console.log("alloy never became available");
-      }
-    };
+    window.adobeDataLayer = window.adobeDataLayer || [];
 
-    trySendEvent();
+    window.adobeDataLayer.push({
+      event: "pageView",
+      page: {
+        viewName: getViewName(location.pathname),
+        url: window.location.href
+      },
+      customer: {
+        id: "CUST001",
+        gender: getSessionGender()
+      }
+    });
+
+    console.log("Pushed to adobeDataLayer:", window.adobeDataLayer[window.adobeDataLayer.length - 1]);
   }, [location]);
 
   return null;
