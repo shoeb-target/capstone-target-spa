@@ -1,4 +1,3 @@
-
 import { useEffect } from "react"
 import GlobalStyle from "./GlobalStyles"
 import {
@@ -39,26 +38,33 @@ function RouteChangeTracker() {
   useEffect(() => {
     const trySendEvent = (retries = 10) => {
       if (window.alloy) {
-       window.alloy("sendEvent", {
-  renderDecisions: true,
-  xdm: {
-    eventType: "web.webpagedetails.pageViews",
-    web: {
-      webPageDetails: {
-        viewName: getViewName(location.pathname),
-        URL: window.location.href
-      }
-    }
-  },
-  data: {
-    __adobe: {
-      target: {
-        "profile.customerName": "Shoeb",
-        "profile.shbGender": getSessionGender()
-      }
-    }
-  }
-});;
+        window.alloy("sendEvent", {
+          renderDecisions: true,
+          xdm: {
+            eventType: "web.webpagedetails.pageViews",
+            web: {
+              webPageDetails: {
+                viewName: getViewName(location.pathname),
+                URL: window.location.href
+              }
+            },
+            identityMap: {
+              "shb-customerid": [
+                {
+                  id: "CUST001",
+                  primary: true
+                }
+              ]
+            }
+          },
+          data: {
+            __adobe: {
+              target: {
+                "profile.shbGender": getSessionGender()
+              }
+            }
+          }
+        });
       } else if (retries > 0) {
         setTimeout(() => trySendEvent(retries - 1), 200);
       } else {
@@ -84,7 +90,6 @@ function App() {
         <Route path="/services" component={Services} />
         <Route path="/products" component={Products} />
         <Route path="/login" component={Login} />
-
       </Switch>
       <Footer />
     </Router>
