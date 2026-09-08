@@ -49,8 +49,9 @@ function RouteChangeTracker() {
               }
             },
             identityMap: {
-              "shb-customerid": [
+              "shoeb_crm_id": [
                 {
+                  authenticatedState: "authenticated",
                   id: "CUST001",
                   primary:false
                 }
