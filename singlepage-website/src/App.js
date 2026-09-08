@@ -52,7 +52,7 @@ function RouteChangeTracker() {
               "shb-customerid": [
                 {
                   id: "CUST001",
-                  primary: true
+                  primary:false
                 }
               ]
             }
